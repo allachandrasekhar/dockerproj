@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  movies:
+    image: allachandrasekhar/movies:latest
+    ports:
+      - 81:80
+    deploy:
+      replicas: 3
+  train:
+    image: allachandrasekhar/train:latest
+    ports:
+      - 82:80
+    deploy:
+      replicas: 3
+  dth:
+    image: allachandrasekhar/dth:latest
+    ports:
+      - 83:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: allachandrasekhar/recharge:latest
+    ports:
+      - 84:80
+    deploy:
+      replicas: 3
